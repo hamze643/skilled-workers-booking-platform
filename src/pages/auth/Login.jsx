@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Wrench, Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { Wrench, Mail, Lock, Eye, EyeOff, ArrowLeft } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import toast from "react-hot-toast";
 
@@ -35,6 +35,13 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 flex items-center justify-center p-4">
+      <button
+        onClick={() => navigate("/")}
+        className="absolute top-6 left-6 inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors"
+      >
+        <ArrowLeft size={18} />
+        <span className="text-sm font-medium">Back to home</span>
+      </button>
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
